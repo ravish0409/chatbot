@@ -51,7 +51,7 @@ class ChatbotGUI:
         self.ask_button = tk.Button(self.frame, text="Ask",bg="#5bd25b", bd = '3', relief=tk.RAISED,command=self.process_question, font=("Arial", 12))
         self.ask_button.pack(side=tk.LEFT, padx=5, pady=5)
 
-        self.knowledge_base = load_knowledge_base('chatbot/knowledge_base.json')
+        self.knowledge_base = load_knowledge_base('knowledge_base.json')
         self.pending_response = False
 
     def process_question(self):
@@ -67,7 +67,7 @@ class ChatbotGUI:
                 self.pending_response = False
             else:
                 self.knowledge_base["questions"].append({"question": self.unknown_question, "answer": user_input})
-                save_knowledge_base('chatbot/knowledge_base.json', self.knowledge_base)
+                save_knowledge_base('knowledge_base.json', self.knowledge_base)
                 self.message_log.insert(tk.END, "User: {}\n".format(user_input), "user")
                 self.message_log.insert(tk.END, "Bot: I've updated my knowledge with your response.\n", "bot")
                 self.pending_response = False
