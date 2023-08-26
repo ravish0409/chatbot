@@ -1,7 +1,7 @@
 import json
 import tkinter as tk
 from difflib import get_close_matches
-
+import time
 
 def load_knowledge_base(file_path: str):
 
@@ -42,7 +42,7 @@ class ChatbotGUI:
         self.message_log = tk.Text(self.frame,bg="#dce5de", height=15, width=40)
         self.message_log.pack(fill=tk.BOTH, expand=True)
         
-        self.message_log.tag_configure("user", foreground="blue")
+        self.message_log.tag_configure("You", foreground="blue")
         self.message_log.tag_configure("bot", foreground="green")
 
         self.user_input = tk.Entry(self.frame, width=40, font=("Arial", 12))
@@ -63,26 +63,27 @@ class ChatbotGUI:
         
         if self.pending_response:
             if user_input.lower() == 'skip':
-                self.message_log.insert(tk.END, "User: {}\n".format(user_input), "user")
+                self.message_log.insert(tk.END, "You: {}\n\n".format(user_input), "You")
                 self.pending_response = False
             else:
                 self.knowledge_base["questions"].append({"question": self.unknown_question, "answer": user_input})
                 save_knowledge_base('knowledge_base.json', self.knowledge_base)
-                self.message_log.insert(tk.END, "User: {}\n".format(user_input), "user")
-                self.message_log.insert(tk.END, "Bot: I've updated my knowledge with your response.\n", "bot")
+                self.message_log.insert(tk.END, "You: {}\n\n".format(user_input), "You")
+                self.message_log.insert(tk.END, "Bot: I've updated my knowledge with your response.\n\n", "bot")
                 self.pending_response = False
         else:
             best_match = find_best_match(user_input, [q["question"] for q in self.knowledge_base["questions"]])
 
             if best_match:
                 answer = get_answer_for_question(best_match, self.knowledge_base)
-                self.message_log.insert(tk.END, "User: {}\n".format(user_input), "user")
-                self.message_log.insert(tk.END, "Bot: {}\n".format(answer), "bot")
+                self.message_log.insert(tk.END, "You: {}\n\n".format(user_input), "You")
+                self.message_log.insert(tk.END, "Bot: {}\n\n".format(answer), "bot")
             else:
                 self.unknown_question = user_input
-                self.message_log.insert(tk.END, "User: {}\n".format(user_input), "user")
-                self.message_log.insert(tk.END, "Bot: I don't know the answer. Can you teach me? If not, type 'skip'\n", "bot")
+                self.message_log.insert(tk.END, "You: {}\n\n".format(user_input), "You")
+                self.message_log.insert(tk.END, "Bot: I don't know the answer. Can you teach me? If not, type 'skip'\n\n", "bot")
                 self.pending_response = True
+        self.message_log.see(tk.END)
 
 if __name__ == "__main__":
     root = tk.Tk()
