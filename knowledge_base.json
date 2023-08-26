@@ -1,0 +1,108 @@
+{
+  "questions": [
+    {
+      "question": "Hi, what positions are available?",
+      "answer": "Hello! You can find the list of available positions on our website's career page."
+    },
+    {
+      "question": "How do I apply?",
+      "answer": "To apply, visit our website's career page and click 'Apply Now' on the job you're interested in."
+    },
+    {
+      "question": "Are there internships?",
+      "answer": "Yes, we offer internships for students and recent grads. Check our website for details."
+    },
+    {
+      "question": "What's the interview process?",
+      "answer": "The interview process involves various rounds, including technical assessments and interviews tailored to the role."
+    },
+    {
+      "question": "Do you have remote work?",
+      "answer": "Yes, we offer remote work options for certain positions."
+    },
+    {
+      "question": "How can I prepare for an interview?",
+      "answer": "Prepare by researching the company, practicing common questions, and showcasing your skills."
+    },
+    {
+      "question": "Are there entry-level roles?",
+      "answer": "Absolutely! We have positions suitable for recent graduates."
+    },
+    {
+      "question": "Is relocation assistance available?",
+      "answer": "Yes, for specific roles, we offer relocation assistance."
+    },
+    {
+      "question": "What is the capital of Italy?",
+      "answer": "Rome"
+    },
+    {
+      "question": "What is the color of the sky?",
+      "answer": "Blue"
+    },
+    {
+      "question": "how are you",
+      "answer": "I'm doing great!"
+    },
+    {
+      "question": "How are you doing mate?",
+      "answer": "I'm doing good"
+    },
+    {
+      "question": "What's up?^",
+      "answer": "Not much, what about you?"
+    },
+    {
+      "question": "Where can I subscribe?",
+      "answer": "Idk, subscribe to what?"
+    },
+    {
+      "question": "Say something funny",
+      "answer": "Your love life"
+    },
+    {
+      "question": "tell me more",
+      "answer": "I don't want to"
+    },
+    {
+      "question": "ok",
+      "answer": ""
+    },
+    {
+      "question": "lol",
+      "answer": "hello"
+    },
+    {
+      "question": "but i can not see what is going on",
+      "answer": "your problem"
+    },
+    {
+      "question": "",
+      "answer": "hello"
+    },
+    {
+      "question": "hello",
+      "answer": "hello there"
+    },
+    {
+      "question": "why ",
+      "answer": "skip"
+    },
+    {
+      "question": "can i help you",
+      "answer": "yes"
+    },
+    {
+      "question": "ffwef",
+      "answer": "garbage"
+    },
+    {
+      "question": "meeting",
+      "answer": "coming soon"
+    },
+    {
+      "question": "contact",
+      "answer": "you can find it on website"
+    }
+  ]
+}
